@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h2 class="logo">Portfolio.</h2>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Kelvin</span> Okolo <br> From Nigeria</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------about--------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/user.png" height="500" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas debitis hic mollitia deleniti, ipsum saepe tempora repellat sit sequi cumque eligendi obcaecati quidem dolores corporis minima explicabo expedita nobis provident sed id, rem ex optio. Totam, dolorum saepe! Non voluptatibus earum commodi facilis nemo recusandae itaque alias nam nulla obcaecati impedit eum temporibus a expedita sit labore, reprehenderit laudantium. Possimus in iure aliquid deserunt, perspiciatis, est illo soluta quas ipsam repellendus a doloremque architecto? Qui, molestias amet neque veniam eaque, autem necessitatibus consequatur ex iure, placeat ducimus illo possimus! Earum excepturi libero ut temporibus minima, vel harum dolores repudiandae eveniet quidem placeat totam maiores, quod ad autem tempore quaerat molestiae delectus praesentium! Voluptatibus, laborum ullam ipsa, assumenda cupiditate illum tenetur harum ad vel deleniti sunt ratione minus. Omnis, ipsum. Repudiandae perferendis laboriosam id dolore enim rem itaque quos debitis nisi, consectetur tenetur blanditiis ipsum modi ratione velit aspernatur culpa ex sequi minus corporis neque. Perferendis unde excepturi repellat. Quo beatae doloribus provident ea cupiditate labore amet sit officiis, maxime totam laudantium veritatis minus excepturi voluptates minima facilis velit vel sed, odio doloremque quaerat porro non quam quas. Saepe doloremque sequi et fugiat dolor, rem ipsum laudantium aut illo recusandae cum?</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Backend Development</span><br>Creating Web/App api servers</li>
+                            <li><span>Frontend Development</span><br>Building Web/App api UI's</li>
+                            <li><span>Mobile Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>Web development training at intern careers</li>
+                            <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
+                            <li><span>2016 - 2017</span><br>Internship at credit direct</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Javascript programming at Udemy</li>
+                            <li><span>2015</span><br>Bsc from Caleb university</li>
+                            <li><span>20130</span><br>PhD at Unilag</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabLinks = document.getElementsByClassName('tab-links');
+        const tabContents = document.getElementsByClassName('tab-contents');
+        
+
+        const opentab = (tabname) => {
+
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link')
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
