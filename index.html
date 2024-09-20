@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <div id="header">
@@ -69,23 +70,5 @@
         </div>
     </div>
 
-    <script>
-        const tabLinks = document.getElementsByClassName('tab-links');
-        const tabContents = document.getElementsByClassName('tab-contents');
-        
-
-        const opentab = (tabname) => {
-
-            for (tabLink of tabLinks) {
-                tabLink.classList.remove('active-link');
-            }
-
-            for (tabContent of tabContents) {
-                tabContent.classList.remove('active-tab');
-            }
-            event.currentTarget.classList.add('active-link')
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
 </body>
 </html>
