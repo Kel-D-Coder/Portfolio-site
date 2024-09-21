@@ -10,6 +10,13 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+             publicKey: "ZZ5lIC36teQlPiL5w",
+           });
+        })();
+     </script>
 </head>
 <body>
     <div id="header">
@@ -114,23 +121,23 @@
                     <div class="layer">
                         <h3>Country Guide App</h3>
                         <p>The app has the funtionality to search for a particular country and it will display the country info</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <a href="https://github.com/Kel-D-Coder/country-guide.git"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="/images/work2.png" alt="">
                     <div class="layer">
                         <h3>Weather App</h3>
-                        <p>The app has the funtionality to search for a particular country and it will display the country info</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <p>The app has the funtionality to search for a particular country and it will display the country's weather</p>
+                        <a href="https://github.com/Kel-D-Coder/js-weather-app.git"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="/images/work1.png" alt="">
+                    <img src="/images/work3.png" alt="">
                     <div class="layer">
-                        <h3>Country Guide App</h3>
-                        <p>The app has the funtionality to search for a particular country and it will display the country info</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Job Search App</h3>
+                        <p>The app has the funtionality to search for aany job in the world and you and also apply</p>
+                        <a href="https://github.com/Kel-D-Coder/react-job-search.git"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
@@ -156,9 +163,11 @@
                 </div>
                 <div class="contact-right">
                     <form action="">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <input type="text" name="Name" placeholder="Your Name" id="name" required>
+                        <input type="email" placeholder="Your Email" id="email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" id="message"></textarea>
+                        <p class="success-msg"></p>
+                        <p class="error-msg"></p>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -168,6 +177,5 @@
             <p>copyright &copy; 2024</p>
         </div>
     </div>
-
 </body>
 </html>
